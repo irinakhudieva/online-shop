@@ -1,0 +1,20 @@
+.cartItem {
+    padding: 15px;
+    margin: 20px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartItem:hover {
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.cart {
+   display: flex;
+   flex-direction: column;
+  
+    background-color: white;
+    padding: 40px;
+}

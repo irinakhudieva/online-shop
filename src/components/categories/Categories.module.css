@@ -1,0 +1,21 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+}
+
+.categories li {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    background-color: darkolivegreen;
+    margin: 3px;
+    padding: 12px;
+    width: 250px;
+    cursor: pointer;
+}
+
+.categories .active {
+    background-color: #7d8c62;
+    
+}

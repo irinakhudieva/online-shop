@@ -1,0 +1,191 @@
+{
+    "tea": [
+      {
+        "id": 1,
+        "name": "Черный чай Цейлон",
+        "description": "Классический черный цейлонский чай, для любителей крупнолистового чая.",
+        "method": "4 г чая на 250 мл горячей воды 95°С, заваривать в течении 2-4 минут. По возможности используйте мягкую фильтрованную воду.",
+        "category": 1,
+        "price": 180,
+        "weight": 50,
+        "rating": 2,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/0a9/280_280_1/1v0drojp6xcxwegewxvq2nt6u2c7y6ni.webp"
+      },
+      {
+        "id": 2,
+        "name": "Чай Нахальный фрукт",
+        "description": "Состав: гибискус, яблоко, изюм, ананас, кожура шиповника, клубника, малина.",
+        "method": "15-20 г чая на 1000 мл горячей воды 90°С, заваривать в течении 8-10 минут.",
+        "category": 3,
+        "price": 122,
+        "weight": 50,
+        "rating": 17,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/f99/280_280_1/f99a8a7b5b6563d02e059c210e83807c.webp"
+      },
+      {
+        "id": 3,
+        "name": "Черный чай Шоулендс",
+        "description": "Черный чай с тонким ароматом и шоколадными нотками. Родина чая - высокогорный район Шри-Ланки Ува.",
+        "method": "4 г чая на 250 мл горячей воды 95°С, заваривать в течении 2-3 минуты.",
+        "category": 1,
+        "price": 342,
+        "weight": 50,
+        "rating": 1,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/426/280_280_1/c4ozzl23stkryc74dhnjioetbpj3guvd.webp"
+      },
+      {
+        "id": 4,
+        "name": "Черный чай Нилгири",
+        "description": "Бюджетный вариант черного индийского чая на каждый день.",
+        "method": "4 г чая на 250 мл кипятка. Заваривать 4-5 минут.",
+        "category": 1,
+        "price": 73,
+        "weight": 50,
+        "rating": 16,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/89e/280_280_1/4hnm58iklplkhrnt0zd1itx546rnrdrn.webp"
+      },
+      {
+        "id": 5,
+        "name": "Чай Сенча",
+        "description": "Если в обычных китайских зеленых чаях для остановки ферментации применяют прожаривание, то сенча изготавливается методом обработки паром. При такой технологии и получается напиток с немного вяжущим вкусом и травянистым ароматом чайного листа. Ломкость чаинок, наличие мелких частиц и порошка — словом, все то, что обычно указывает на низкое качество, — для этого чая совершенно нормально. Листья сенча скручены в тонкие трубочки и напоминают сплющенные хвоинки.",
+        "method": "4 г чая на 250 мл горячей воды 70-75°С, заваривать в течении 2-4 минут.",
+        "category": 2,
+        "price": 77,
+        "weight": 50,
+        "rating": 3,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/67c/280_280_1/nh62m6o34cp0lqu2zcqyuqikpjwwo3oa.webp"
+      },
+      {
+        "id": 6,
+        "name": "Зеленый чай Чжу Ча",
+        "description": "Храм Неба - это ганпаудер премиального качества. Этот чай отличается от классического пороха более интересным вкусом и ароматом.",
+        "method": "4 г чая на 250 мл горячей воды 70-75°С, заваривать в течении 2-4 минут.",
+        "category": 2,
+        "price": 153,
+        "weight": 50,
+        "rating": 15,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/612/280_280_1/sdxxpvemkl0m655s6fcu38fuwhav4rz6.webp"
+      },
+      {
+        "id": 7,
+        "name": "Чай зеленый Лю Ань Гуа Пянь, Премиум",
+        "description": "Китайский зеленый чай премиум-класса. В процессе заваривания он раскрывается неожиданными гранями. Его толстые листочки, скрывающие в скрутке нежно-зеленую изнанку, напоминают семена тыквы. В заваренном виде листья нежны и мясисты.",
+        "method": "Этот сорт чая рекомендуется заваривать в стеклянной посуде, избегая кипятка.",
+        "category": 2,
+        "price": 440,
+        "weight": 50,
+        "rating": 4,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/249/280_280_1/pzpddc6l2vvhrbsrzrdkyvtrnr0kyaqw.webp"
+      },
+      {
+        "id": 8,
+        "name": "Чай зелёный Кукича с юдзу и матча",
+        "description": "Японский зеленый чай с добавлением чая матча и юдзу.",
+        "method": "3-4 г чая на 250 мл горячей воды 80-85°С, заваривать в течении 1-2 минут.",
+        "category": 2,
+        "price": 930,
+        "weight": 50,
+        "rating": 14,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/757/280_280_1/kfmvjn2ea00zd5jihch8nff12zgsp3u6.webp"
+      },
+      {
+        "id": 9,
+        "name": "Чай Огненная вишня",
+        "description": "Фруктово-ягодный чайный напиток на основе гибискуса. Отличный вкус даже в холодном виде.",
+        "method": "15-20 г чая на 1000 мл горячей воды 90°С, заваривать в течении 8-10 минут.",
+        "category": 3,
+        "price": 122,
+        "weight": 50,
+        "rating": 5,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/6b8/280_280_1/cn9d3pmnjp8o9o8z4r2s6f3v0jdxkkbo.webp"
+      },
+      {
+        "id": 10,
+        "name": "Чай Императорский сад",
+        "description": "Приятный и популярный напиток на основе гибискуса.",
+        "method": "5-6 г на 250 мл горячей воды 95°C, заваривать 3-4 минуты.",
+        "category": 3,
+        "price": 130,
+        "weight": 50,
+        "rating": 8,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/157/280_280_1/5y01xafcvfv5is9eiri586tl5b6ppudm.webp"
+      },
+      {
+        "id": 11,
+        "name": "Чайный напиток Летняя прохлада",
+        "description": "Вкусный, освежающий ягодный напиток. Состав:  мята, белый изюм, сублимированные ягоды малины и облепихи, сушеный персик, кусочки апельсина, ароматизатор.",
+        "method": "5-6 г на 250 мл горячей воды 95°C, заваривать 3-4 минуты.",
+        "category": 3,
+        "price": 321,
+        "weight": 50,
+        "rating": 6,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/e75/280_280_1/e7541b5158989f71461b981e6acd7c09.webp"
+      },
+      {
+        "id": 12,
+        "name": "Зеленый чай Египетские ночи",
+        "description": "Яркий вкус и насыщенный цветочно-фруктовый аромат этого напитка никого не оставит равнодушным.",
+        "method": "3-4 г чая на 250 мл горячей воды 80-85°С, заваривать в течении 1-2 минут.",
+        "category": 2,
+        "price": 230,
+        "weight": 50,
+        "rating": 13,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/079/280_280_1/sggkwkqfa268u8c9rrpz59hsoa1cx954.webp"
+      },
+      {
+        "id": 13,
+        "name": "Чай черный Ассам Дижу",
+        "description": "Ассам Дижу - индийский черный чай, культивируемый на клональных деревьях в чайном саду на реке Брахмапутре. Сад расположен на высоте 300 м над уровнем моря, а с местностью, в которой расположен сад, соседствуют холмы Аруначал-Прадеш и река Ранга",
+        "method": "4 г чая на 250 мл горячей воды 95°С, заваривать в течении 2-4 минут. По возможности используйте мягкую фильтрованную воду.",
+        "category": 1,
+        "price": 342,
+        "weight": 50,
+        "rating": 12,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/94e/280_280_1/gmqigz6gawy2lijdq8q0xprhmyyu0xnj.webp"
+      },
+      {
+        "id": 14,
+        "name": "Зеленый чай Медвежья сила",
+        "description": "Вкус: на передний план выходит вкус мяты, пресный, чуть сладковатый, с нотками яблочной кожуры.",
+        "method": "3-4 г чая на 250 мл горячей воды 80-85°С, заваривать в течении 1-2 минут.",
+        "category": 2,
+        "price": 204,
+        "weight": 50,
+        "rating": 7,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/b80/280_280_1/9inbfokkvb8x2eatpz6990u8zmvcwmcy.webp"
+      },
+      {
+        "id": 15,
+        "name": "Чай зеленый Слёзы ангела",
+        "description": "Несмотря на кажущуюся простоту это невероятно вкусный купаж на основе китайского зеленого чая Сенча.",
+        "method": "4 г чая на 250 мл горячей воды 70-75°С, заваривать в течении 2-4 минут.",
+        "category": 2,
+        "price": 153,
+        "weight": 50,
+        "rating": 11,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/09d/280_280_1/upe26i7enj4xn52lt5ze7nof2hshzg5c.webp"
+      },
+      {
+        "id": 16,
+        "name": "Чай черный Малина со сливками",
+        "description": "Приятный купаж на основе черного чая, с малиновым ароматом.",
+        "method": "4 г чая на 250 мл горячей воды 95°С, заваривать в течении 2-4 минут. По возможности используйте мягкую фильтрованную воду.",
+        "category": 1,
+        "price": 229,
+        "weight": 50,
+        "rating": 9,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/078/280_280_1/ciopowfhkm1g38a9frb1crrugzu87p9i.webp"
+      },
+      {
+        "id": 17,
+        "name": "Чай черный Алтайский",
+        "description": "Очень красивый купаж на основе смеси черных чаев, ягод и трав.",
+        "method": "4 г чая на 250 мл горячей воды 95°С, заваривать в течении 2-4 минут. По возможности используйте мягкую фильтрованную воду.",
+        "category": 1,
+        "price": 259,
+        "weight": 50,
+        "rating": 10,
+        "image": "https://101tea.ru/upload/ammina.optimizer/jpg-webp/q70/upload/resize_cache/iblock/472/280_280_1/472dea9377e1e889a83bcaa0e0e53d4d.webp"
+      }
+    ]
+}

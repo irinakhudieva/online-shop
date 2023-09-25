@@ -1,0 +1,43 @@
+.sort {
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    position: relative;
+    margin-right: 20px;
+}
+
+.sort span {
+    font-weight: bold;
+    color: darkolivegreen;
+    margin-left: 10px;
+    border-bottom: 1px darkolivegreen dashed;
+    cursor: pointer;
+}
+
+.sort ul {
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.sort ul li {
+   padding: 5px;
+}
+.sort .active {
+    color:  darkolivegreen;
+}
+
+.sort .popup {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    overflow: hidden;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.label {
+    margin-left: 70px;
+    
+}

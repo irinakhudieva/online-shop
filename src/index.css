@@ -1,13 +1,65 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 16px;
+  margin: 60px 100px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ebf2df;
+  background-image: url('https://celes.club/uploads/posts/2022-09/1662424745_3-celes-club-p-chainii-list-oboi-3.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.button {
+  background: transparent;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  color:darkolivegreen;
+  border: 1px solid darkolivegreen;
+  padding: 2px 7px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.button-done {
+  background-color: #ccd6ba;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  color:darkolivegreen;
+  border: 1px solid darkolivegreen;
+  padding: 2px 7px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.sort-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 100px;
+  background-color: white;
+}
+
+.block {
+  margin: 0 auto;
+  width: 1150px;
+  height: 730px;
+  background-color: #a4b08f;
+}
+
+.block img {
+  z-index: 10;
+  margin: 20px;
+  position: relative;
+  left: -100px;
+  top: 20px;
+  
 }

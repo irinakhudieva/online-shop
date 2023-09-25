@@ -1,0 +1,46 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.favorites {
+    margin: 0 auto;
+}
+.favorites h1 {
+    text-align: center;
+    font-size: 24px;
+}
+.favorites p {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.catalog {
+    background-color: white;
+    padding: 30px;
+}
+
+.catalog h2 {
+    text-align: center;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 130px;
+    color: grey;
+}
+
