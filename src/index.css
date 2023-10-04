@@ -6,38 +6,40 @@
 }
 
 body {
-  font-size: 16px;
-  margin: 60px 100px;
   font-family: 'Montserrat', sans-serif;
-  background-color: #ebf2df;
+  background-color: #243011;
   background-image: url('https://celes.club/uploads/posts/2022-09/1662424745_3-celes-club-p-chainii-list-oboi-3.jpg');
   background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 .button {
   background: transparent;
   font-family: 'Source Code Pro', monospace;
-  font-weight: 400;
+  font-weight: 600;
   color:darkolivegreen;
   border: 1px solid darkolivegreen;
   padding: 2px 7px;
   height: 30px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 5px;
+}
+
+.button[disabled] {
+  opacity: 0.5;
 }
 
 .button-done {
-  background-color: #ccd6ba;
+  background-color: #c5ceb6;
   font-family: 'Source Code Pro', monospace;
-  font-weight: 400;
+  font-weight: 600;
   color:darkolivegreen;
   border: 1px solid darkolivegreen;
   padding: 2px 7px;
   height: 30px;
   font-size: 16px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .sort-category {

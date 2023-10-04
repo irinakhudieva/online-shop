@@ -1,0 +1,51 @@
+.root {
+    position: relative;
+    left: -120px;
+  }
+
+.input {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 12px 20px;
+    padding-left: 42px;
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    font-size: 16px;
+    
+}
+[type="search"]:focus {
+    height: 40px;
+    outline: none; 
+    border: 1px solid darkolivegreen; 
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
+
+  
+
+.icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    position: absolute;
+    left: 14px;
+    top: 12px;
+}
+  
+.clearIcon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.3;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    cursor: pointer;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+}

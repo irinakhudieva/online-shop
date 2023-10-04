@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from '../components/tea-list/TeaList.module.css';
-import { useFavorite } from '../hooks/useFavorites';
 import TeaItem from '../components/tea-item/TeaItem';
+import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Favorites = () => {
-    const favorites = useFavorite();
+    const favorites = useSelector(state => state.favorites);
 
     return (
         <div className={styles.favorites}>
@@ -14,7 +15,12 @@ const Favorites = () => {
                         <TeaItem key={tea.id} tea={tea} />
                 )}
             </div>
-            {!favorites.length && <p className={styles.favorites}>У вас нет выбранных товаров. Перейдите в каталог и подберите себе что-нибудь по вкусу.</p>}
+            
+            {!favorites.length && 
+            <div className={styles.content}>
+                <p>У вас нет выбранных товаров. Перейдите в каталог и подберите себе что-нибудь по вкусу.</p>
+            </div>}
+            <NavLink to='/'><button className='button'>В каталог</button></NavLink>
         </div>
     )
 }

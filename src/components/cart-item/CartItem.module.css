@@ -1,9 +1,9 @@
 .cartItem {
     padding: 15px;
-    margin: 20px;
-    max-width: 1000px;
+    margin: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cartItem:hover {
@@ -11,10 +11,68 @@
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
+.title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-basis: 40%;
+    
+}
+
+.title img {
+    margin: 0 10px;
+}
+
+.title p:hover {
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
 .cart {
-   display: flex;
-   flex-direction: column;
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
     padding: 40px;
+}
+
+.cart h1 {
+    text-align: center;
+    font-size: 24px;
+}
+.cart .content {
+    margin: 20px 0;
+    text-align: center;
+
+}
+.content p {
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 80px;
+}
+
+.total {
+    display: flex;
+    justify-content: end;
+    margin: 15px 30px;
+    font-size: 20px;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    color: white;
+    background-color: darkolivegreen;
+    border-radius: 3px;
+    border: none;
+}
+
+.weigthBlock {
+	width: 130px;
+	display: flex;
+	justify-content: space-between;
 }

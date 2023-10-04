@@ -4,6 +4,7 @@ header {
     align-items: center;
     background-color: white;
     padding: 20px;
+    border-radius: 10px;
 }
 
 header nav a {
@@ -19,3 +20,4 @@ header nav a {
     width: 450px;
     padding: 10px;
 }
+

@@ -11,15 +11,10 @@ export const api = createApi({
     endpoints: builder => ({
         getTea: builder.query({
             query: (args) => {
-                const { category, sort, order, page, limit} = args;
+                const { category, sort, order, page, limit, searchValue} = args;
                 return {
-                    url: `${category}&_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}`
+                    url: `${category}&_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}&q=${searchValue}`
                 }
-            },
-            transformResponse: (response, meta) => {
-                console.log(meta.response.headers.get('X-Total-Count'));
-                console.log(response)
-                return response;
             }
         }),
         getTeaById: builder.query({

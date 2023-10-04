@@ -15,7 +15,7 @@ const TeaList = ({isLoading, data}) => {
                     key={tea.id}
                     tea={tea} />)
             ) : (
-                <div>NOT FOUND</div>
+                <div>Произошла ошибка, попробуйте позже.</div>
             )}
             
         </div>

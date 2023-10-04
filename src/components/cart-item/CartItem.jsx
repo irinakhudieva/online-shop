@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './CartItem.module.css';
-import Price from '../tea-item/Price';
 import { CloseOutlined } from '@ant-design/icons';
 import { removeItem } from '../../store/cart/cart.slice';
 import { useDispatch } from 'react-redux';
+import Weight from './Weight';
+import { useNavigate } from 'react-router-dom';
 
-const CartItem = ({tea}) => {
-    const [price, setPrice] = useState(tea.price);
-    const [weight, setWeight] = useState(tea.weight)
+const CartItem = ({tea, index}) => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-
+    const { id, image, name, price, weight }  = tea;
+   
     return (
         <div className={styles.cartItem}>
-            {tea.name}
-            <div>
-                {tea.weight} гр.
+            <div className={styles.title}>
+                {index + 1}.
+                <img className={styles.image} src={image} />
+                <p onClick={() => navigate(`/${id}`)}>{name} </p>
             </div>
+            <Weight tea={tea} />
             <div>
-                {tea.price} р.
-                <CloseOutlined style={{marginLeft: 15}} onClick={() => dispatch(removeItem(tea.id))} />
-            </div>
-            
-            {/* <Price tea={tea} /> */}
-            
+                {weight/50 * price} р.
+                <CloseOutlined 
+                    style={{marginLeft: 15}} 
+                    onClick={() => dispatch(removeItem(id))} 
+                />
+            </div>    
         </div>
     )
 }

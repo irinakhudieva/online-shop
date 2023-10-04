@@ -53,63 +53,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+	
 }
 
-.button {
-    align-self: flex-end;
-}
-
-.inputNumber {
-	display: inline-block;
-	position: relative;
-	width: 90px;
-}
-.inputNumber input[type="number"] {
-	display: block;
-	height: 30px;
-	line-height: 30px;
-    border: 1px solid darkolivegreen;
-    border-radius: 2px;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	text-align: center;
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
-	appearance: textfield;
-}
-.inputNumber input[type="number"]::-webkit-outer-spin-button,
-.inputNumber input[type="number"]::-webkit-inner-spin-button {
-	display: none;
-}
-.numberMinus {
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	bottom: 1px;
-	width: 20px;
-	padding: 0;
-	display: block;
-	text-align: center;
-	border: none;
-	border-right: 1px solid #ddd;
+.price span {
 	font-size: 16px;
-	font-weight: 500;
-}
-.numberPlus {
-	position: absolute;
-	top: 1px;
-	right: 1px;
-	bottom: 1px;
-	width: 20px;
-	padding: 0;
-	display: block;
-	text-align: center;
-	border: none;
-	border-left: 1px solid #ddd;
-	font-size: 16px;
-	font-weight: 500;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -118,3 +67,4 @@
     justify-content: end;
     fill: tomato;
 }
+

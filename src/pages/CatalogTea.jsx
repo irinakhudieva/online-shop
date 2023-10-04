@@ -1,55 +1,41 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import TeaList from '../components/tea-list/TeaList';
 import styles from '../components/tea-list/TeaList.module.css';
 import Categories from '../components/categories/Categories';
 import Sort from '../components/sort/Sort';
 import { useGetTeaQuery } from '../store/api/api';
-// import { Pagination } from 'antd';
 import Pagination from '../components/pagination/Pagination';
-import { getPageCount } from '../utils/pages';
+import { SearchContext } from '../providers/SearchProvider';
 
 
 const CatalogTea = () => {
-    const [data2, setData] = useState([])
     const [categoryIndex, setCategoryIndex] = useState(0);
     const [sortType, setSortType] = useState({
         name: 'популярности', 
         sortProperty: 'rating' 
     });
-    const [limit, setLimit] = useState(5);
-    
+    const [limit, setLimit] = useState(4);
     const [page, setPage] = useState(1);
 
     const sort = sortType.sortProperty.replace('-', '');
     const order = sortType.sortProperty.includes('-') ?  'desc' : 'asc';
     const category = categoryIndex > 0 ? `?category=${categoryIndex}` : '?_category=0';
     
-    
-    const {data, isLoading} = useGetTeaQuery({
+    const { searchValue } = useContext(SearchContext);
+
+    const {data, isLoading, error} = useGetTeaQuery({
         category, 
         sort, 
         order,
         page,
-        limit
+        limit,
+        searchValue
     });
-  
-    // const totalCount = data?.response;
-    // console.log(totalCount)
 
-    // const totalPages = getPageCount(totalCount, limit);
-    // // useEffect(() => {
-    //     if(data) {
-    //     setData(data);
-    //   };
-    // }, [data, page])
-      
+    const totalPages = data?.length;
 
-    // console.log(data?.length)
-
-    // useEffect(() => {
-    //     setTotalPages(getPageCount(totalCount, limit)) 
-    // }, [limit, totalCount])
-   
+    const onChangeCategory = useCallback((i) => setCategoryIndex(i), [])
+    
 
     const changePage = (page) => {
         setPage(page);
@@ -61,7 +47,8 @@ const CatalogTea = () => {
             <div className={styles.row}>
                 <Categories 
                     category={categoryIndex} 
-                    onClickCategory={(i) => setCategoryIndex(i)} 
+                    onClickCategory={onChangeCategory} 
+                    changePage={changePage}
                 />
                 <div className={styles.column}>
                     <Sort 
@@ -71,12 +58,12 @@ const CatalogTea = () => {
                     <TeaList 
                         isLoading={isLoading} 
                         data={data}
+                        error={error}
                     />
-                    {/* <Pagination simple defaultPageSize={5} pageSize={3} defaultCurrent={1} total={data?.length} onChange={changePage}/> */}
                     <Pagination  
                         page={page}
                         changePage={changePage}
-                        // totalPages={totalPages}
+                        totalPages={totalPages}
                     />
                 </div>   
             </div>

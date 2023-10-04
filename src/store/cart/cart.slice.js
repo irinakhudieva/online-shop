@@ -1,50 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [];
+const initialState = {
+    cart: []
+};
     
-
 
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addCart: (state, action) => {
-            const findItem = state.find(item => item.id === action.payload.id);
+        addToCart: (state, { payload }) => {
+            const findItem = state.cart.find(item => item.id === payload.id);
 
             if (findItem) {
-                findItem.weight = findItem.weight + findItem.weight;
-                findItem.price = findItem.price + findItem.price;
+                findItem.weight += 50;
             } else {
-                state.push(action.payload);
+                state.cart.push({ ...payload, weight: 50 });
             }  
         },
-        itemPlus: (state, action) => {
-            const findItem = state.find((obj) => obj.id === action.payload.id);
+        itemMinus: (state, { payload }) => {
+            const findItem = state.cart.find((item) => item.id === payload);
 
-            if (findItem) {
-                findItem.weight = findItem.weight + findItem.weight;
-                findItem.price = findItem.price + findItem.price;
-
+            if (findItem.weight === 0) {
+                return findItem.weight;
+            } else {
+                findItem.weight -= 50;
             }
-            console.log(findItem)
         },
-        itemMinus: (state, action) => {
-            const findItem = state.find((obj) => obj.id === action.payload);
-
-            if (findItem) {
-                findItem.weight = findItem.weight - findItem.weight;
-                findItem.price = findItem.price - findItem.price;
-
-            }
-            
-        },
-        removeItem: (state, action) => {
-            const findIndex = state.filter(item => item.id !== action.payload);
-            state.splice(findIndex, 1);
+        removeItem: (state, { payload }) => {
+            const findIndex = state.cart.filter(item => item.id !== payload);
+            state.cart.splice(findIndex, 1);
         }
     }
 
 })
 
 
-export const { addCart, removeItem, itemPlus, itemMinus } = cartSlice.actions;
+export const { addToCart, removeItem, itemMinus } = cartSlice.actions;

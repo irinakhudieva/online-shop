@@ -1,54 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './TeaItem.module.css';
-import { InputNumber } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../store/cart/cart.slice';
 
+const Price = ({tea}) => {
+    const dispatch = useDispatch();
 
-const Price = ({ tea }) => {
+    const { cart } = useSelector(state => state.cart);
     
-    const [price, setPrice] = useState(0);
-    const [weight, setWeight] = useState(50);
+    const isExists = cart.some(t => t.id === tea.id);
 
-    const onChange = (value) => {
-        setWeight(value);
-    };
- 
-    const calcPrice = (price, weight) => {
-        if (weight === tea.weight) {
-          setPrice(price);
-        } else {
-          const newPrice = price/tea.weight * weight;
-          setPrice(newPrice);
-        }
-    }
-
-    useEffect(() => {
-        calcPrice(tea.price, weight);
-    }, [weight, price, tea.price])
-    
     return (
-        <div>
-           <h3>{new Intl.NumberFormat('ru', {
-                    style: 'currency',
-                    currency: 'RUB',
-                    minimumFractionDigits: 0
-                }).format(price)}
-            </h3>
-            <InputNumber 
-                style={{
-                    width: 63,
-                    height: 30,
-                    borderColor: 'rgba(85, 107, 47, 0.5)',  
-                }}
-                min={50} 
-                max={1000} 
-                defaultValue={50} 
-                step={50} size={'small'} 
-                value={weight} 
-                onChange={onChange} 
-            /> гр.        
-        </div>
+        <div className={styles.price}>
+            <h3>{tea.price} p. / <span> 50 гр.</span>
+            </h3>            
+            {!isExists 
+                ? <button 
+                    className='button'
+                    onClick={() => dispatch(addToCart(tea))}
+                  >
+                    В корзину
+                  </button>
+                : <button
+                      className='button-done'
+                  >
+                    В корзине
+                  </button>
+
+                }             
+        </div>     
     )
 }
 
 export default Price;
-

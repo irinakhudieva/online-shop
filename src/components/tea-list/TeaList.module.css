@@ -6,23 +6,33 @@
 
 .favorites {
     margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
 .favorites h1 {
     text-align: center;
     font-size: 24px;
 }
-.favorites p {
+.favorites .content {
     margin: 20px 0;
+    
     text-align: center;
+
+}
+.content p {
+    margin-bottom: 15px;
 }
 
 .catalog {
     background-color: white;
-    padding: 30px;
+    padding: 5px 20px; 
+    margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 .catalog h2 {
     text-align: center;
+    margin-bottom: 20px;
     
 }
 
@@ -40,6 +50,7 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 40px;
+    margin-left: 100px;
     font-size: 130px;
     color: grey;
 }

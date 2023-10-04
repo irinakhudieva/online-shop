@@ -54,3 +54,9 @@
 .button {
     align-self: flex-end;
 }
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}

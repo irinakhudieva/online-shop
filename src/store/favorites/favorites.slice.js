@@ -6,21 +6,21 @@ export const favoritesSlice = createSlice({
     name: 'favorites',
     initialState,
     reducers: {
-        toggleFavorites: (state, {payload: tea}) => {
-            const isExists = state.some(t => t.id === tea.id);
+        toggleFavorites: (state, {payload}) => {
+            const isExists = state.some(t => t.id === payload.id);
 
             if(isExists) {
-                const index = state.findIndex(item => item.id === tea.id);
+                const index = state.findIndex(item => item.id === payload.id);
                 
                 if(index !== -1) {
                     state.splice(index, 1);
                 }
             } else {
-                state.push(tea);
+                state.push(payload);
             }
         }
     }
 
 })
 
-export const { actions, reducer } = favoritesSlice;
+export const { toggleFavorites } = favoritesSlice.actions;

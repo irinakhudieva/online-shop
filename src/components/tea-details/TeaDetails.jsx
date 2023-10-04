@@ -1,37 +1,26 @@
 import React, { useState } from 'react';
 import styles from './TeaDetails.module.css';
-import Price from '../tea-item/Price';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import FavoritesItem from '../tea-item/FavoritesItem';
-import { addCart } from '../../store/cart/cart.slice';
-import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import Price from '../tea-item/Price';
 
 const TeaDetails = ({tea}) => {
     
     const [isShow, setIsShow] = useState(false);
     const [isShow2, setIsShow2] = useState(false);
-
-    const dispatch = useDispatch();
-
+  
     return (
         <div className={styles.description}>
-            <div>
+            
+            <div className={styles.image}>
                 <img src={tea.image} alt='Фото чая' />
+                <NavLink to='/'><button className='button'>В каталог</button></NavLink>
             </div>
             <div>
                 <FavoritesItem tea={tea} />
                 <h1>{tea.name}</h1>
-                <div className={styles.price}>
-                    <Price tea={tea} />
-                    <div className={styles.button}>
-                        <button 
-                            className='button'
-                            onClick={() => dispatch(addCart(tea))}
-                        >
-                            в корзину
-                        </button>
-                    </div> 
-                </div>
+                <Price tea={tea} />
                 <div className={styles.text}> 
                     <div className={styles.details}>
                         <strong>Описание: </strong>

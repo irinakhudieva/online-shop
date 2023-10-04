@@ -1,7 +1,7 @@
 .categories {
     display: flex;
     flex-direction: column;
-    margin-left: 35px;
+    margin-left: 15px;
 }
 
 .categories li {
@@ -11,11 +11,11 @@
     background-color: darkolivegreen;
     margin: 3px;
     padding: 12px;
-    width: 250px;
+    width: 200px;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .categories .active {
     background-color: #7d8c62;
-    
 }
