@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Categories.module.css';
 
 
-const Categories = ({ category, onClickCategory, changePage }) => {
-    const categories = ['Все товары', 'Черный чай', 'Зеленый чай', 'Фруктовый чай'];
+const Categories = ({ category, onClickCategory}) => {
+    const categories = ['Все товары', 'Очищение', 'Увлажнение', 'Питание', 'Наборы'];
 
     return (
         <div >
             <ul className={styles.categories}>
                 {categories.map((categoriesName, index) => (
-                    <li key={index} onClick={() => {onClickCategory(index); changePage(1)} }
+                    <li key={index} onClick={() => {onClickCategory(index)} }
                     className={category === index ? styles.active : ''}>
                         {categoriesName}
                     </li>

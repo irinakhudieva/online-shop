@@ -1,45 +1,33 @@
 import React, { useCallback, useContext, useState } from 'react';
-import TeaList from '../components/tea-list/TeaList';
-import styles from '../components/tea-list/TeaList.module.css';
+import СosmeticsList from '../components/сosmetics-list/СosmeticsList';
+import styles from '../components/сosmetics-list/CosmeticsList.module.css';
 import Categories from '../components/categories/Categories';
 import Sort from '../components/sort/Sort';
-import { useGetTeaQuery } from '../store/api/api';
-import Pagination from '../components/pagination/Pagination';
 import { SearchContext } from '../providers/SearchProvider';
+import { useGetCosmeticsQuery } from '../store/api/api';
 
 
-const CatalogTea = () => {
+const CatalogСosmetics = () => {
     const [categoryIndex, setCategoryIndex] = useState(0);
     const [sortType, setSortType] = useState({
         name: 'популярности', 
         sortProperty: 'rating' 
     });
-    const [limit, setLimit] = useState(4);
-    const [page, setPage] = useState(1);
 
     const sort = sortType.sortProperty.replace('-', '');
     const order = sortType.sortProperty.includes('-') ?  'desc' : 'asc';
     const category = categoryIndex > 0 ? `?category=${categoryIndex}` : '?_category=0';
     
     const { searchValue } = useContext(SearchContext);
-
-    const {data, isLoading, error} = useGetTeaQuery({
+ 
+    const { data, isLoading}  = useGetCosmeticsQuery({
         category, 
         sort, 
         order,
-        page,
-        limit,
         searchValue
     });
 
-    const totalPages = data?.length;
-
     const onChangeCategory = useCallback((i) => setCategoryIndex(i), [])
-    
-
-    const changePage = (page) => {
-        setPage(page);
-    }
 
     return (
         <div className={styles.catalog}>
@@ -48,22 +36,17 @@ const CatalogTea = () => {
                 <Categories 
                     category={categoryIndex} 
                     onClickCategory={onChangeCategory} 
-                    changePage={changePage}
                 />
                 <div className={styles.column}>
-                    <Sort 
-                        sort={sortType} 
-                        onChangeSort={(i) => setSortType(i)} 
-                    />
-                    <TeaList 
+                    {data && (
+                        <Sort 
+                            sort={sortType} 
+                            onChangeSort={(i) => setSortType(i)} 
+                        />  
+                    )}
+                    <СosmeticsList 
                         isLoading={isLoading} 
                         data={data}
-                        error={error}
-                    />
-                    <Pagination  
-                        page={page}
-                        changePage={changePage}
-                        totalPages={totalPages}
                     />
                 </div>   
             </div>
@@ -71,4 +54,4 @@ const CatalogTea = () => {
     )
 }
 
-export default CatalogTea;
+export default CatalogСosmetics;

@@ -3,8 +3,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 header nav a {
@@ -21,3 +21,22 @@ header nav a {
     padding: 10px;
 }
 
+@media (max-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .goods {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px;
+    }
+}

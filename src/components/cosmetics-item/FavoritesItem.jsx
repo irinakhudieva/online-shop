@@ -1,18 +1,18 @@
 import React from 'react';
-import styles from './TeaItem.module.css';
+import styles from './CosmeticsItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFavorites } from '../../store/favorites/favorites.slice';
+import { selectFavorites, toggleFavorites } from '../../store/favorites/favorites.slice';
 
-const FavoritesItem = ({tea}) => {
-    const favorites = useSelector(state => state.favorites);
+const FavoritesItem = ({cosm}) => {
+    const favorites = useSelector(selectFavorites);
     const dispatch = useDispatch();
 
-    const isExists = favorites.some(t => t.id === tea.id);
+    const isExists = favorites.some(c => c.id === cosm.id);
 
     return (
         <div className={styles.floatRigth}>
             <svg 
-                onClick={() => dispatch(toggleFavorites(tea))} 
+                onClick={() => dispatch(toggleFavorites(cosm))} 
                 width="1.2em" 
                 height="1.2em" 
                 fill="currentColor" 

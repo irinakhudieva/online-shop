@@ -13,19 +13,17 @@ export const cartSlice = createSlice({
             const findItem = state.cart.find(item => item.id === payload.id);
 
             if (findItem) {
-                findItem.weight += 50;
+                findItem.count++;
             } else {
-                state.cart.push({ ...payload, weight: 50 });
+                state.cart.push({ ...payload, count: 1 });
             }  
         },
         itemMinus: (state, { payload }) => {
             const findItem = state.cart.find((item) => item.id === payload);
 
-            if (findItem.weight === 0) {
-                return findItem.weight;
-            } else {
-                findItem.weight -= 50;
-            }
+            if (findItem) {
+                findItem.count--;
+            } 
         },
         removeItem: (state, { payload }) => {
             const findIndex = state.cart.filter(item => item.id !== payload);
@@ -35,5 +33,6 @@ export const cartSlice = createSlice({
 
 })
 
+export const selectCart = (state) => state.cart;
 
 export const { addToCart, removeItem, itemMinus } = cartSlice.actions;

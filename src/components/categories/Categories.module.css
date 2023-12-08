@@ -2,20 +2,27 @@
     display: flex;
     flex-direction: column;
     margin-left: 15px;
+    text-transform: uppercase;
 }
 
 .categories li {
     text-decoration: none;
     list-style-type: none;
-    color: white;
-    background-color: darkolivegreen;
-    margin: 3px;
+    border-left: 3px solid transparent;
     padding: 12px;
-    width: 200px;
+    width: 250px;
     cursor: pointer;
-    border-radius: 3px;
 }
 
 .categories .active {
-    background-color: #7d8c62;
+    border-left: 3px solid black;
+    /* background-color: black;
+    
+    color: white; */
+}
+
+@media (max-width: 450px) {
+    .categories li {
+        width: 90%;
+    }
 }

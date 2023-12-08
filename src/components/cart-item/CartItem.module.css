@@ -7,7 +7,6 @@
 }
 
 .cartItem:hover {
-    border-radius: 5px;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
@@ -23,7 +22,7 @@
     margin: 0 10px;
 }
 
-.title p:hover {
+.title h4:hover {
     font-weight: bold;
     color:rgba(0, 0, 0, 0.8);
     cursor: pointer;
@@ -51,7 +50,7 @@
 }
 
 .image {
-    width: 80px;
+    width: 150px;
 }
 
 .total {
@@ -62,17 +61,39 @@
 }
 
 .button {
-    width: 20px;
-    height: 20px;
+    background-color: black;
+    width: 21px;
+    height: 21px;
     margin: 0 8px;
-    color: white;
-    background-color: darkolivegreen;
-    border-radius: 3px;
     border: none;
+    color: white;
 }
 
-.weigthBlock {
-	width: 130px;
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.countBlock {
+	width: 100px;
 	display: flex;
 	justify-content: space-between;
+}
+
+.price {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 660px) {
+    .cartItem {
+        padding: 15px;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        height: 150px;
+    }
 }

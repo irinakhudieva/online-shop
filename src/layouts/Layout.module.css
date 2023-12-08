@@ -1,15 +1,10 @@
 .wrapper {
-    width: calc(100vw - 100px);
-    height: calc(100vh - 100px);
     background-color: white;
-    margin: 40px auto;
-    border-radius: 10px;
-    max-width: 1500px;
+    margin: 0 20px;
 }
 
 .content {
     margin-bottom: 30px;
-    border-radius: 10px;
 }
 
 @media (max-width: 645px) {

@@ -7,16 +7,15 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 12px 20px;
     padding-left: 42px;
-    width: 300px;
+    width: 320px;
     height: 40px;
-    border-radius: 7px;
     font-size: 16px;
     
 }
 [type="search"]:focus {
     height: 40px;
     outline: none; 
-    border: 1px solid darkolivegreen; 
+    border: 1px solid black; 
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -25,6 +24,24 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none; 
 }
 
+@media (max-width: 750px) {
+    .root {
+        position: relative;
+        left: -80px;
+      }
+    .input {
+        width: 200px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .root {
+        position: relative;
+        left: 0px;
+    }
+    
+}
   
 
 .icon {

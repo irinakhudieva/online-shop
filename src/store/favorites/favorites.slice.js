@@ -20,7 +20,8 @@ export const favoritesSlice = createSlice({
             }
         }
     }
-
 })
+
+export const selectFavorites = (state) => state.favorites;
 
 export const { toggleFavorites } = favoritesSlice.actions;

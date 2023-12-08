@@ -1,23 +1,26 @@
 import React from 'react';
-import styles from './TeaItem.module.css';
+import styles from './CosmeticsItem.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../../store/cart/cart.slice';
+import { addToCart, selectCart } from '../../store/cart/cart.slice';
 
-const Price = ({tea}) => {
+const Price = ({cosm}) => {
     const dispatch = useDispatch();
 
-    const { cart } = useSelector(state => state.cart);
+    const { cart } = useSelector(selectCart);
     
-    const isExists = cart.some(t => t.id === tea.id);
+    const isExists = cart.some(c => c.id === cosm.id);
 
     return (
         <div className={styles.price}>
-            <h3>{tea.price} p. / <span> 50 гр.</span>
-            </h3>            
+            <h3>{new Intl.NumberFormat('ru', {
+                    style: "currency",
+                    currency: 'RUB',
+                    minimumFractionDigits: 0
+                }).format(cosm.price)}</h3>            
             {!isExists 
                 ? <button 
                     className='button'
-                    onClick={() => dispatch(addToCart(tea))}
+                    onClick={() => dispatch(addToCart(cosm))}
                   >
                     В корзину
                   </button>
