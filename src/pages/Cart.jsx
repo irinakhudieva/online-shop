@@ -20,12 +20,12 @@ const Cart = () => {
                     <div className={styles.total}>
                         <strong>Сумма заказа: {sumBy(cart.map(({ count, price }) => price * count))} р.</strong>
                     </div> 
-                    <NavLink to='/'><button className='button'>В каталог</button></NavLink>
+                    <NavLink to='/online-shop'><button className='button'>В каталог</button></NavLink>
                 </div>
             ) : (
                 <div className={styles.content}>
                     <p>Ваша корзина пуста. Для того, чтобы выбрать товары, перейдите в каталог.</p>
-                    <NavLink to='/'><button className='button'>В каталог</button></NavLink>
+                    <NavLink to='/online-shop'><button className='button'>В каталог</button></NavLink>
                 </div>
             )} 
         </div>

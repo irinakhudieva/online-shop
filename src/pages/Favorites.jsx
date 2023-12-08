@@ -20,10 +20,10 @@ const Favorites = () => {
                 ) : (
                     <div className={styles.content}>
                         <p>У вас нет выбранных товаров. Перейдите в каталог и подберите себе что-нибудь по вкусу.</p>
-                        <NavLink to='/'><button className='button'>В каталог</button></NavLink> 
+                        <NavLink to='/online-shop'><button className='button'>В каталог</button></NavLink> 
                     </div>
                 )}   
-                {!!favorites.length && <NavLink to='/'><button className='button'>В каталог</button></NavLink>}
+                {!!favorites.length && <NavLink to='/online-shop'><button className='button'>В каталог</button></NavLink>}
         </div>
     )
 }
