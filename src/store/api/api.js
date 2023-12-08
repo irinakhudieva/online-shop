@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 
-const API_URL = 'http://localhost:4200/cosmetics'
+const API_URL = 'https://my-json-server.typicode.com/irinakhudieva/db.json/cosmetics'
 
 export const api = createApi({
     reducerPath: 'api',
