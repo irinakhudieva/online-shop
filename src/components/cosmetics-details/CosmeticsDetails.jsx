@@ -13,7 +13,7 @@ const CosmeticsDetails = ({cosm}) => {
     return (
         <div className={styles.description}>
             <div className={styles.image}> 
-                <NavLink to='/'><button className='button'>В каталог</button></NavLink>
+                <NavLink to='/online-shop'><button className='button'>В каталог</button></NavLink>
                 <img src={cosm.image} alt='Фото чая' />
             </div>
             <div className={styles.descriptionItem}>

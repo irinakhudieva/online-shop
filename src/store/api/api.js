@@ -11,9 +11,9 @@ export const api = createApi({
     endpoints: builder => ({
         getCosmetics: builder.query({
             query: (args) => {
-                const { category, sort, order, page, limit, searchValue} = args;
+                const { category, sort, order, searchValue} = args;
                 return {
-                    url: `${category}&_sort=${sort}&_order=${order}&_page=${page}&_limit=${limit}&q=${searchValue}`
+                    url: `${category}&_sort=${sort}&_order=${order}&q=${searchValue}`
                 }
             }
         }),
